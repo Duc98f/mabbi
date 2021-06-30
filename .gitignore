@@ -1,0 +1,7 @@
+.env
+config/settings/default.py
+config/db.sqlite3
+
+venv
+__pycache__
+.idea
