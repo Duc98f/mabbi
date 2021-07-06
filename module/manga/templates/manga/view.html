@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for manga in sth %}
+            <li><h1>{{ manga.name }}</h1></li>
+            {% for chapter in manga.chapter.all %}
+                <li>{{ chapter.name }}</li>
+                {% for image in chapter.image.all %}
+                    <ul><img src="http://127.0.0.1:8000/upload/images/{{ image.image }}" alt="{{ image.index }}" width="720" height="540"></ul>
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    {% load rest_framework %}
+
+</body>
+</html>
